@@ -10,8 +10,13 @@
   margin: 0 auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #161513;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -19,6 +24,22 @@ header {
   box-shadow: 0 5px 16px -2px rgba(0, 0, 0, 0.1);
   background: #222222;
   width: 100%;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.5s ease, color 0.5s ease;
+  background: linear-gradient(to right, white 50%, #ff6347 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  display: inline-block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header a:hover {
+  background-position: 0;
+  -webkit-text-fill-color: white;
 }
 
 .header {
@@ -289,4 +310,81 @@ footer .footer div a {
 }
 footer .footer__icons {
   margin-top: 40px;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #1e1e1e;
+  /* Match your header background */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: none;
+  /* Hidden by default */
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#backToTop:hover {
+  transform: scale(1.1);
+  background-color: #555;
+  /* Slightly lighter for hover effect */
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  transform: scale(1.1);
+  /* Slightly increase size */
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Scrollbar for modern design */
+::-webkit-scrollbar {
+  width: 8px;
+  /* Width of the scrollbar */
+  height: 8px;
+  /* Height for horizontal scroll */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  /* Light transparent background */
+  border-radius: 10px;
+  /* Rounded edges */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  /* Semi-transparent white */
+  border-radius: 10px;
+  /* Rounded edges for the thumb */
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  /* Smooth hover effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.8);
+  /* Brighten the thumb on hover */
+}
+
+body {
+  scrollbar-width: thin;
+  /* For Firefox: Makes scrollbar thinner */
+  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.1);
+  /* Thumb and track colors */
 }/*# sourceMappingURL=main.css.map */
