@@ -6,29 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link style="rotate:90deg;" rel="shortcut icon" href="./imgs/imzo.png" type="image/x-icon">
 
-    <title>Portfolio</title>
+    <title>About Mark</title>
 </head>
 
 <body>
     <main id="home">
-        <header id="navbar">
-            <div class="header container">
+        <header>
+            <div class="header container mb-container mb-header">
                 <img src="./imgs/imzo.png" alt="">
                 <div class="header__links">
                     <a href="#home"> Home</a>
                     <a href="#projects">Projects</a>
                     <a href="#Experience">Experience</a>
                     <a href="#Contact">Contact</a>
-
                 </div>
             </div>
         </header>
-        <div class="main-sec container">
-            <img src="./imgs/Avatar.svg" alt="">
-            <h1>I do code and
+        <div class="main-sec container mb-container mb-main-sec">
+            <img data-aos="fade-down" class="avatar" src="./imgs/me1.png" alt="">
+            <h1 data-aos="fade-down">I do code and
                 make content <span> about it!</span></h1>
-            <p>Hello, my full name is Izzatillayev Javohir but you can call me Mark. I am 16 years old and I a full
+            <p data-aos="fade-down">Hello, my full name is Izzatillayev Javohir but you can call me Mark. I am 16 years
+                old and I a full
                 stack developer
                 and now I am practising my coding skills. I have Learned HTML, CSS, JS, ReactJS, NodeJS, Git, GitHub,
                 Figma, Python, Django, etc. I am also interested in many other things, such as Cyber securite and cyber
@@ -41,7 +43,7 @@
         </div>
 
     </main>
-    <div class="Experience with">
+    <div data-aos="fade-right" class="Experience with">
         <b>EXPERIENCE WITH</b>
         <div class="Experience__icons">
             <img src="./imgs/javascript.svg" alt="">
@@ -53,10 +55,10 @@
         </div>
 
     </div>
-    <div id="projects" class="projects container">
-        <h1>Projects</h1>
+    <div id="projects" class="projects container mb-container mb-projects">
+        <h1 data-aos="fade-left">Projects</h1>
         <div class="projects__cards">
-            <div class="projects__cards__card">
+            <div data-aos="flip-right" class="projects__cards__card">
                 <a href="https://explore-indonesia-swart.vercel.app/" target="_blank"">
                     <img class=" projects__cards__card__img" src="./imgs/image.png" alt="">
                 </a>
@@ -73,7 +75,7 @@
                     </a>
                 </div>
             </div>
-            <div class="projects__cards__card">
+            <div data-aos="flip-left" class="projects__cards__card">
                 <a href="https://amirbekandmark.vercel.app/" target="_blank">
                     <img class="projects__cards__card__img" src="./imgs/project-img2.png" alt="">
                 </a>
@@ -91,7 +93,7 @@
             </div>
         </div>
         <div class="projects__cards">
-            <div class="projects__cards__card">
+            <div data-aos="flip-right" class="projects__cards__card">
                 <a href="https://cast-press-nu.vercel.app/" target="_blank"">
                     <img class=" projects__cards__card__img" src="./imgs/project-img3.png" alt="">
                 </a>
@@ -108,7 +110,7 @@
                     </a>
                 </div>
             </div>
-            <div class="projects__cards__card">
+            <div data-aos="flip-left" class="projects__cards__card">
                 <a href="https://plants-company.vercel.app/" target="_blank">
                     <img class="projects__cards__card__img" src="./imgs/project-img4.png" alt="">
                 </a>
@@ -127,9 +129,9 @@
         </div>
 
     </div>
-    <div id="Experience" class="Experience-sec container">
-        <h1>EXPERIENCE</h1>
-        <div class="Experience-sec__texts">
+    <div id="Experience" class="Experience-sec container mb-container mb-Experience">
+        <h1 data-aos="flip-up">EXPERIENCE</h1>
+        <div data-aos="zoom-in" class="Experience-sec__texts">
             <div class="Experience-sec__texts__logo">
                 <div>
                     <img src="./imgs/najot-logo.jpg" alt="">
@@ -142,7 +144,7 @@
                 lot of freinds, experience, and knowledge. My teacher was Muhammadamin Abbosov, he is the best of the
                 best, in nutshell he is a genius. I am very grateful to him and to Najot Ta'lim.</p>
         </div>
-        <div class="Experience-sec__texts">
+        <div data-aos="zoom-in" class="Experience-sec__texts">
             <div class="Experience-sec__texts__logo">
                 <div>
                     <img src="./imgs/geeks.jpg" alt="">
@@ -155,7 +157,7 @@
                 it was so easy to start to cooding and I am very grateful to my first teacher. Ther I learned a lot of
                 things and practised a lot because you know that Python is venomous ;) </p>
         </div>
-        <div class="Experience-sec__texts">
+        <div data-aos="zoom-in" class="Experience-sec__texts">
             <div class="Experience-sec__texts__logo">
                 <div>
                     <img src="./imgs/my-school.jpg" alt="">
@@ -174,7 +176,7 @@
 
     </div>
     <footer id="Contact">
-        <div class="footer container">
+        <div data-aos="zoom-in-up" class="footer container mb-container">
             <h1>Contact</h1>
             <p>Seasoned Full Stack Software Engineer with over 8 years of hands-on experience in designing
                 and implementing robust, scalable, and innovative web solutions. Adept at leveraging a
@@ -218,6 +220,21 @@
     };
 
 
+</script>
+<script>
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
 </script>
 
 

@@ -6,7 +6,7 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -24,6 +24,12 @@ header {
   box-shadow: 0 5px 16px -2px rgba(0, 0, 0, 0.1);
   background: #222222;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background-color 0.5s ease;
+  z-index: 1000;
 }
 header a {
   color: white;
@@ -40,6 +46,12 @@ header a {
 header a:hover {
   background-position: 0;
   -webkit-text-fill-color: white;
+}
+
+.header.scrolled {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 .header {
@@ -75,7 +87,13 @@ header a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 120px);
+  margin-top: 30px;
+}
+.main-sec .avatar {
+  width: 240px;
+  height: 245px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .main-sec img {
   margin-top: 100px;
@@ -387,4 +405,39 @@ body {
   /* For Firefox: Makes scrollbar thinner */
   scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.1);
   /* Thumb and track colors */
+}
+
+@media screen and (max-width: 768px) {
+  .mb-container {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .mb-header {
+    flex-direction: column-reverse;
+  }
+  .mb-main-sec {
+    padding: 0 20px;
+  }
+  .mb-main-sec h1 {
+    width: 100%;
+    font-size: 40px;
+  }
+  .mb-main-sec .avatar {
+    width: 200px;
+    height: 200px;
+    margin-top: 150px;
+  }
+  .mb-main-sec p {
+    width: 100%;
+  }
+  .mb-projects .projects__cards {
+    flex-direction: column;
+  }
+  .mb-Experience h1 {
+    width: 100%;
+  }
+  .mb-Experience .Experience-sec__texts__logo {
+    flex-direction: column;
+    gap: 30px;
+  }
 }/*# sourceMappingURL=main.css.map */
